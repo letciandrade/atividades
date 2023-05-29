@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <label for="text">Descrição:</label>
+            <input class="descricao" type="text">
+            <label for="number">Valor da conta:</label>
+            <input class="dinheiroConta"type="number">
+            <button class="botao">Registrar Conta</button>
+
+            <div>
+                <p class="retorno">
+
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        
+        const botao = document.querySelector('.botao')
+        const retorno = document.querySelector('.retorno')
+
+        botao.addEventListener('click',()=>{
+        let descricao = document.querySelector('.descricao').value
+        let dinheiro = document.querySelector('.dinheiroConta').value
+        let arrayContas = [ ]
+
+         arrayContas.push(descricao)
+         arrayContas.push( '- R$' )
+         arrayContas.push(dinheiro)
+
+        retorno.textContent = `${arrayContas}`
+
+
+        })
+    </script>
+</body>
+</html>

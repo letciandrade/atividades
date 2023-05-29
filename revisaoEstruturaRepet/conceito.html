@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao - estrutur de repetiçao</title>
+</head>
+<body>
+    <script>
+//while
+
+function getInteiroAleatorioEntre(min, max){
+    const valor = Math.random() * (min - max) - min
+    return Math.floor(valor)
+}
+
+console.log(getInteiroAleatorioEntre(-1, 15))
+
+let opcao = 1
+// nao sabemos quantas vezes ira se repetir, so vai parar de repetir quando chegar a 1 que é esse exemplo!
+//so para de funcionar quando a condicao se torna falsaa
+while(opcao != -1){
+    opcao = getInteiroAleatorioEntre(-1, 15)
+    console.log(`opcao escolhida: ${opcao}`)
+}
+
+console.log(`ate a proxima!`)
+
+
+//estrutura FOR 
+// nos sabemos quantas vezes vai se repetir para usar o for, sempre que executar isso vai se repetir da mesma forma e nunca vai mudar...
+// geralmente se usa essa estrutura quando se trabalha com vetor 
+
+for(let i= 1; i<= 10; i++){
+    console.log(`i:${i}`)
+}
+
+const notas = [6.8, 3.1, 2.4, 9.5, 7.1]
+// console.log(notas.length) o length conta a quantidade de elementos no array
+
+for( let i=0; i< notas.length; i++){
+    if(notas[i] > 5){
+console.log(`notas: ${notas}`)
+    }
+    
+}
+
+
+    </script>
+</body>
+</html>

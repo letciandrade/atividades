@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Tabuada</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <section>
+        <img src="./img/matematica.png" alt="">
+    </section>
+        
+        <form>
+            <h1>Programa Tabuada</h1>
+            <label for="number">Número</label>
+            <input id="numero" type="number">
+            <button type="button" id="botao">Clique aqui</button>
+            <p id="retorno"></p>
+        </form>
+    </main>
+    <script>
+const botao = document.getElementById('botao')
+const resultado = document.getElementById('retorno')
+
+botao.addEventListener('click',()=>{
+
+let numero = document.getElementById('numero').value
+if(numero == 0 || isNaN(numero)){
+    alert('digite um numero valido')
+    numero.focus()
+    return
+}
+
+
+let resposta = ''
+for(let i=0; i<=10; i++ ){
+resposta =`${resposta + numero} x ${i} = ${numero*i} <br>`
+
+}
+
+resultado.innerHTML = `${resposta}`
+
+
+})
+
+
+
+
+    </script>
+</body>
+</html>

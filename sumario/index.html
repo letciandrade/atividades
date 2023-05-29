@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+
+  <style>
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url(https://fonts.google.com/specimen/Hanken+Grotesk);
+
+    :root{
+      --LightRed: hsl(0, 100%, 67%);
+      --OrangeyYellow: hsl(39, 100%, 56%);
+      --GreenTeal: hsl(166, 100%, 37%);
+      --CobaltBlue: hsl(234, 85%, 45%);
+      
+
+
+      --White: hsl(0, 0%, 100%);
+      --PaleBlue: hsl(221, 100%, 96%);
+      --LightLavender: hsl(241, 100%, 89%);
+      --DarkGrayBlue: hsl(224, 30%, 27%);
+
+      --LightsLateBlue: hsl(252, 100%, 67%);
+      --LightRoyalBlue: hsl(241, 81%, 54%);
+
+      --VioletBlue: hsla(256, 72%, 46%, 1);
+      --PersianBlue: hsla(241, 72%, 46%, 0);
+    }
+
+
+
+    body{
+      background-color: gray;
+    }
+
+   
+    main{
+      display: flex;
+      justify-content: center;
+    
+    }
+
+    .container{
+      display: flex;
+      background-color: var(--White);
+      border-radius: 3rem;
+    }
+
+    .caixaEsquerda{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+      height: 25rem;
+      background: linear-gradient(to bottom, var(--LightsLateBlue), var(--LightRoyalBlue)) ;
+      border-radius: 2rem;
+    }
+
+    .titulo{
+     color: var(--White);
+     font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .circulo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, var(--VioletBlue), var(--PersianBlue));
+      width: 10rem;
+      height: 10rem;
+      border-radius: 10rem;
+    }
+
+    .circulo p{
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+  
+    .sumario{
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+    }
+
+    .mensagem{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 0.8rem;
+      color: var(--White);
+    }
+
+    .great{
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .setseis{
+      color: var(--White);
+      font-weight: 700;
+      font-size: 3rem;
+      
+      
+    }
+
+    .cem{
+   color: var(--White);
+   opacity: 50%;
+  
+  
+    }
+
+    
+.botaoContinue{
+background-color: var(--DarkGrayBlue);
+text-align: center;
+border-radius: 3rem;
+
+}
+
+.botaoContinue a{
+  
+font-family: 'Hanken Grotesk', sans-serif;
+text-decoration: none;
+color: var(--White);
+}
+
+.caixaDireita article{
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+}
+
+.caixaDireita{
+  background-color: var(--White);
+  border-radius: 2rem;
+}
+
+#memory,#visual,#verbal,#reaction{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.caixaDireita{
+  padding: 0.8rem;
+}
+
+.nota1,.nota2,.nota3,.nota4{
+  
+  color:var(--DarkGrayBlue);
+}
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <!-- o todo -->
+ <div class="container">
+<!-- caixa da esquerda -->
+<aside class="caixaEsquerda">
+  <!-- inicio titulo -->
+  <h1 class="titulo"> Your Result</h1>
+  <!-- final titulo -->
+
+  <!-- inicio circulo score  -->
+  <div class="circulo">
+      <h1 class="setseis">76</h1>
+      <p  class="cem">of 100</p>
+  </div>
+  <!-- final circulo score -->
+
+  <!--  inicio mensagem do score -->
+  <article class="mensagem">
+    <p class="great">Great</p>
+    <p>You scored higher than 65% of the people who have taken these tests.</p>
+   
+  </article>
+  <!-- final mensagem do score-->
+   </aside>
+   <!-- final caixa da esquerda -->
+
+
+<!-- caixa da direita -->
+   <aside class="caixaDireita">
+   
+      <!-- titulo -->
+<h1 class="sumario">Summary</h1>
+<!-- final titulo -->
+
+<!-- inicio das sessoes -->
+
+  <article id="reaction">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#F55" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z"/></svg>
+    <p> Reaction </p>
+    <p class="nota1">80 / 100</p>
+  </article>
+  
+  <article id="memory">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"/><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"/><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0"/></svg>
+    <p> Memory </p>
+      <p class="nota2">92 / 100</p>
+  </article>
+  
+  <article id="verbal">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#00BB8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z"/></svg>
+    <p>verbal</p>
+    <p class="nota3"> 61 / 100</p>
+  </article>
+  
+  <article id="visual"> 
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"/><path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z"/></svg>
+    <p >visual</p>
+  
+      <p class="nota4">72 / 100</p>
+  </article>
+  <!-- final das sessoes -->
+  
+  <!-- botao continue -->
+    <div class="botaoContinue">
+      <a href="#">Continue</a>
+    </div>
+    <!-- final botao continue -->
+
+
+    
+   </aside>
+   <!-- final caixa da direita -->
+ </div>
+
+    
+    
+   
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://github.com/carloswvas" target="_blank">Carlos Vasconcelos</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+
+ document.getElementById('reaction').style.backgroundColor = 'hsla(0, 88%, 83%, 0.1)';
+ document.getElementById('memory').style.backgroundColor = 'hsla(39, 66%, 79%, 0.2)';
+ document.getElementById('verbal').style.backgroundColor = 'hsla(166, 71%, 77%, 0.2)';
+ document.getElementById('visual').style.backgroundColor = 'hsl(234, 76%, 75%, 0.2)';
+
+ document.getElementById('reaction').style.color = 'hsl(0, 100%, 67%)';
+ document.getElementById('memory').style.color = 'hsl(39, 100%, 56%)';
+ document.getElementById('verbal').style.color = 'hsl(166, 100%, 37%)';
+ document.getElementById('visual').style.color = 'hsl(234, 85%, 45%)';
+
+  </script>
+</body>
+</html>

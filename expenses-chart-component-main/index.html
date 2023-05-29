@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0.7rem;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --laranja: #f2785c;
+        --ciano: #add4d9;
+        --creme: #f2e7dc;
+        --marromEscuro: #402718;
+        --vermelho: #f26f63;
+        --branco: #fff;
+        --cinza: #c3c0bb;
+      }
+
+  .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      
+      a {
+        text-decoration: none;
+        color: var(--branco);
+      }
+
+      body {
+        background-color: var(--creme);
+        font-size: "DM Sans", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        padding: 0.7rem;
+        height: 6rem;
+        width: 30rem;
+
+        font-family: "DM Sans", sans-serif;
+
+        background-color: var(--laranja);
+        border-radius: 0.5rem;
+        color: var(--branco);
+      }
+
+      .balance {
+        font-weight: 400;
+        font-size: 0.8rem;
+       
+      }
+
+      .money {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: .1rem;
+
+      }
+
+      .box-2 {
+        font-family: "DM sans", sans-serif;
+
+        background-color: var(--branco);
+        border-radius: 0.5rem;
+
+        
+        width: 30rem;
+      }
+
+      .caixa{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .days {
+        font-family: "DM Sans", sans-serif;
+        color: var(--marromEscuro);
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .weeks {
+        display: flex;
+        flex-direction: row;
+        color: var(--cinza);
+        
+      }
+
+      .month {
+        display: flex;
+        flex-direction: column;
+        
+      }
+
+      .total-month {
+        font-size: 0.8rem;
+        color: var(--cinza);
+     
+      }
+
+      .Money {
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--marromEscuro);
+      }
+
+      .porcetagem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .fLastMth {
+        color: var(--cinza);
+      }
+
+      hr{
+        color: var(--cinza);
+      }
+
+    
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="box-1">
+          <p class="balance">My balance</p>
+          <p class="money">$921.48</p>
+
+  <img class="logo" src="./images/logo.svg" alt="" />
+
+         
+        </section>
+
+        <section class="box-2">
+          <article class="days">
+            <p>Spending - Last 7 days</p>
+          </article>
+
+         
+
+          <article class="weeks">
+            <p class="mon">mon</p>
+            <p class="tue">tue</p>
+            <p class="wed">wed</p>
+            <p class="thu">thu</p>
+            <p class="fri">fri</p>
+            <p class="sat">sat</p>
+            <p class="sun">sun</p>
+          </article>
+<hr>
+          <section class="caixa">
+            <article class="month">
+              <p class="total-month">Total this month</p>
+              <p class="Money">$478.33</p>
+            </article>
+  
+            <article class="porcetagem">
+              <p>+2.4%</p>
+              <p class="fLastMth">from last month</p>
+            </article>
+          </section>
+          
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Letícia Andrade</a>.
+    </div>
+  </body>
+</html>

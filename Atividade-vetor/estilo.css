@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#635985;
+    font-family: 'Open Sans';
+}
+h1{
+    font-size:5rem;
+    text-align:center;
+    color: #fff;
+}
+.form{
+background-color: #393053;
+height: 8.5rem;
+width:19rem;
+border-radius: 5px;
+
+}
+
+
+
+input{
+    border:none;
+    height: 30px;
+    padding: 1rem ;
+    margin: 1rem;
+   
+}
+
+.botao-add,.botao-ordernar{
+    display: flex ;
+    align-items: center;
+    border: none;
+    background-color: #635985;
+    color: #fff;
+    border-radius:4px;
+    padding: 0.6rem ;
+    margin: 0.6rem;
+}
+
+
+main{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+

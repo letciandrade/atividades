@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número decrescente</title>
+    <style>
+           *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+       <section>
+        <img src="./img/matematica.png" alt="">
+       
+        <h1>Programa número decrescente</h1>
+        <p>Número</p>
+        <input class="numeros" type="number">
+        <button type="button"class="botao">Descer até 1</button>
+        <hr>
+            <p class="retorno"></p>
+       </section>
+         
+     
+    </main>
+
+    <script>
+          //referencia dos elementos que vai utilizar
+        //refenciou um constante para dizer que essas informações não podem mudar ao longo do coisa
+        const numeros = document.querySelector('.numeros')
+        const botao = document.querySelector('.botao')
+        const retorno = document.querySelector('.retorno')
+        
+        //o add event listener espera dois parametros,o primeiro paramero é o 'click' pq vai clicar e coisar ai pode colocar no segundo parametrouma funcao externa, arrow function ou function anonima!
+    botao.addEventListener('click', ()=>{
+  //receber informação
+  let numero = Number(numeros.value)
+
+//tratar as informações
+if(numero === 0){
+alert('Digite um valor válido')
+//o focus vai referencia o input meio que fazendo 'foi aqui que vc errou concerte!!!'
+numeros.focus()
+numeros.value = ''
+return 
+}
+//dar uma resposta
+let resposta = `Entre ${numero} até 1: `
+for(let i = numero; i > 0 ; i--){
+if(numero === 1){
+return
+}
+resposta = resposta + i + ", " 
+}
+
+retorno.textContent = resposta
+
+    })
+      
+        
+
+
+    </script>
+</body>
+</html>

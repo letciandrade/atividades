@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caixa eletronico</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            
+        }
+
+        .imagem{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             
+        }
+
+        hr{
+            width: 50%;
+           
+        }
+
+        .resultado{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="imagem">
+                <img src="./imgs/caixaEletronico.png" alt="">
+            </div>
+            <form action="">
+                <h1>Programa Caixa eletrônico</h1>
+                <hr>
+                <label for="">Valor do saque R$:</label>
+                <input id="valor" type="number">
+                <button id="botao" type="button">Exibir notas para saque</button>
+            </form>
+        </section>
+
+        <div class="resultado">
+            <p id="retorno">
+
+            </p>
+        </div>
+    </main>
+
+    <script>
+        
+        const botao = document.getElementById('botao')
+        const valor = document.getElementById('valor').value
+        const resultado = document.getElementById('retorno')
+
+        botao.addEventListener('click', ()=>{
+
+        let resto = (valor - ((N100*100)+(N50*50)))
+        // var resto = (valor.value-(qtd100*100))
+        let N50 = (resto/50)
+        let N100 = (valor/100)
+        let N10 = (resto/10)
+      
+      
+        resultado.textContent = `Notas de 100R$: ${N100} Notas de 10R$:${N10} Notas de 50R$: ${N50}`
+
+
+        })
+</script>
+       
+
+
+
+ 
+</body>
+</html>

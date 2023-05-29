@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiz Quadrada</title>
+    <style>
+
+        
+
+        form{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+        }
+
+        .imagem{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             
+        }
+
+        hr{
+            width: 50%;
+           
+        }
+
+        .resultado{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="imagem">
+                <img src="./imgs/imagem-raizQuadrada.png" alt="">
+            </div>
+            <form action="">
+               
+               <h1>Programa Raiz Quadrada</h1>
+               <hr>
+               <label for="number">Número:</label>
+               <input id="numero" type="number">
+               <button id="botao"type="button">Exibir raiz quadrada</button>
+               
+            </form>
+
+            <div class="resultado">
+                <p id="retornoCalculo"> </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botao = document.getElementById('botao')
+        const numero = document.getElementById('numero')
+        const retorno = document.getElementById('retornoCalculo')
+
+        botao.addEventListener('click',()=>{
+
+
+            
+         if(Math.sqrt(numero.value) % 1){
+
+            retorno.textContent = 'Esse número não tem raiz exata'
+           
+         }
+
+        else{
+            retorno.textContent = ` Aqui se encontra a raiz quadrada desse número! : ${Math.sqrt(numero.value)}`
+         }
+        
+         })
+
+
+
+    </script>
+</body>
+</html>
